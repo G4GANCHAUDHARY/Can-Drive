@@ -1,19 +1,31 @@
-# 10x Academy JavaScript Assignments
+# Can / Should You Drive
 
-## Curated list of JavaScript Assignments to make you familiar with the concepts of the language
+## Given set of three inputs, you should determine if you should be allowed to drive or not
 
-<br />  
-  
-[Assignments:](assignments)
-* [BMI Calculator](assignments/bmi_calculator/BMICalculator.md)
-* [Favourite Movie](assignments/favourite_movie/FavouriteMovie.md)
-* [Can Drive](assignments/can_drive/CanDrive.md)
-* [Run Callback](assignments/run_callback/RunCallback.md)
-* [Play With Array](assignments/play_with_array/PlayWithArray.md)
-* [Create Object](assignments/create_object/CreateObject.md)
+Factors to check (inputs provided are in the same order)
+* You have driving liscence
+* You are tired
+* You are sober
 
-## Please follow these steps before submitting
-* Create a new branch off master to code your solution into
-* Check if you have followed the instructions properly
-* Run ```npm run test``` and see if all the test cases are passed
-* If all the tests are passed, push the code and raise the PR 
+You should only be allowed to drive when you have diriving liscence, when you are not tired and when you are sober
+
+If you don't have liscence - the result should be "You cannot drive"
+
+Otherwise
+
+If you are tired - "You shouldn't drive"
+
+If you are not sober - "You shouldn't drive"
+
+If you are not tired and you are sober - "You can drive"
+
+```bash
+Input - false, false, true
+Output - "You cannot drive"
+Input - true, false, true
+Output - "You can drive"
+Input - true, true, false
+Output - "You shouldn't drive"
+```
+
+Run ```npm run test:file can_drive``` to check if your solution is correct
